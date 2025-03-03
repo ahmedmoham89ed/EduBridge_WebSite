@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="max-w-[75%] mx-auto mt-10 mb-4 pt-4 px-4">
+    <div className="max-w-[85%] mx-auto mt-10 mb-4 pt-4 px-4">
       <motion.div  
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.2, delay: 0.2 }} 
           viewport={{ once: false }}  
-          className="flex flex-col md:flex-row gap-40 pb-10">
+          className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 xl:gap-40 lg:gap-20 md:gap-12 sm:gap-3 sm:grid-cols-2 pb-10">
        
         <motion.div
           initial={{ opacity: 0, x: -250, scale: 0.9 }}

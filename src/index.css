@@ -202,3 +202,9 @@ body{
 .boook::before{
   background-color: blue;
 }
+@media screen and (max-width: 640px){
+   .book::before{
+    top: 30px;
+   }
+  
+}

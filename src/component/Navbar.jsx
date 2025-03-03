@@ -52,25 +52,25 @@ const components= [
 
 export default function NavigationMenuDemo() {
   return (
-    <NavigationMenu className="flex items-center justify-center gap-32 py-4 bg-[#252b42] max-w-[100%]">
+    <NavigationMenu className="flex items-center md:space-x-0 sm:space-x-0 sm:gap-0 justify-center gap-32 lg:gap-10 md:gap-0 lg:py-5 md:py-2 sm:py-2 bg-[#252b42] max-w-[100%]">
         <NavigationMenuList>
             {/* tilte of navbar */}
             <NavigationMenuItem>
                 <Link to="/" legacyBehavior passHref>
-                    <NavigationMenuLink className="NavigationMenuLink" >
+                    <NavigationMenuLink className="NavigationMenuLink lg:text-3xl md:text-2xl sm:text-lg" >
                     EduBridge
                     </NavigationMenuLink>
                 </Link>
             </NavigationMenuItem>
 
         </NavigationMenuList>
-        <NavigationMenuList className="flex gap-4" >
+        <NavigationMenuList className="flex gap-4 lg:gap-1 md:gap-0 md:space-x-0 sm:space-x-0 sm:gap-0" >
         
             {/* home */}
             <NavigationMenuItem >
-            <NavigationMenuTrigger className="text-base text-white bg-[#252b42] hover:bg-[#252b42] hover:text-white focus:bg-[#252b42]">Home</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-base md:text-sm sm:text-sm text-white sm:space-x-0 bg-[#252b42] hover:bg-[#252b42] hover:text-white focus:bg-[#252b42]">Home</NavigationMenuTrigger>
             <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <ul className="grid gap-3 p-4 md:w-[200px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                     <NavigationMenuLink asChild>
                     <Link
@@ -103,9 +103,9 @@ export default function NavigationMenuDemo() {
 
             {/* about  */}
             <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-base text-white bg-[#252b42] hover:bg-[#252b42] hover:text-white focus:bg-[#252b42]">About</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="text-base md:text-sm sm:text-sm sm:space-x-0 text-white bg-[#252b42] hover:bg-[#252b42] hover:text-white focus:bg-[#252b42]">About</NavigationMenuTrigger>
             <NavigationMenuContent>
-                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                <ul className="grid gap-3 p-4 md:w-[200px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                     <NavigationMenuLink asChild>
                     <Link
@@ -138,9 +138,9 @@ export default function NavigationMenuDemo() {
             
             {/* product */}
             <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-base text-white bg-[#252b42] hover:bg-[#252b42] hover:text-white focus:bg-[#252b42]">Product</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-base md:text-sm sm:text-sm sm:space-x-0 text-white bg-[#252b42] hover:bg-[#252b42] hover:text-white focus:bg-[#252b42]">Product</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <ul className="grid w-[200px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {components.map((component) => (
                         <ListItem
                         key={component.title}
@@ -157,7 +157,7 @@ export default function NavigationMenuDemo() {
             {/* pricing */}
             <NavigationMenuItem>
             <Link to="/Pricing" legacyBehavior passHref>
-                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-base bg-[#252b42] text-white `}>
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} lg:inline-block md:inline-block xl:inline-block 2xl:inline-block sm:hidden text-base md:text-sm bg-[#252b42] text-white `}>
                    Pricing
                 </NavigationMenuLink>
             </Link>
@@ -166,16 +166,16 @@ export default function NavigationMenuDemo() {
             {/*contact  */}
             <NavigationMenuItem>
             <Link to="/Contact" legacyBehavior passHref>
-                <NavigationMenuLink className={` ${navigationMenuTriggerStyle()} text-base bg-[#252b42] text-white`}>
+                <NavigationMenuLink className={` ${navigationMenuTriggerStyle()} text-base  md:text-sm bg-[#252b42] text-white lg:inline-block md:inline-block xl:inline-block 2xl:inline-block sm:hidden`}>
                   Contact
                 </NavigationMenuLink>
             </Link>
             </NavigationMenuItem>
 
         </NavigationMenuList>
-        <NavigationMenuList className="flex gap-10">
-            <Link to={"/"} className="text-base text-white font-light font-[rlight] hover:scale-110 duration-500 " >Login</Link>
-            <Link to={"/"} className="bg-sky-500 px-3 flex items-center justify-center gap-2 py-1 text-lg text-white rounded-lg font-[rCondensed] hover:scale-110 duration-300 transition-all ease-in-out ">Join Us <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg></Link>
+        <NavigationMenuList className="flex gap-10 lg:gap-4 md-gap-1">
+            <Link to={"/"} className="text-base md:text-sm text-white font-light font-[rlight] hover:scale-110 duration-500 " >Login</Link>
+            <Link to={"/"} className="bg-sky-500 px-3 flex items-center justify-center gap-2 md:gap-0 md:text-sm py-1 text-lg text-white rounded-lg font-[rCondensed] md:font-[rlight] hover:scale-110 duration-300 transition-all ease-in-out ">Join Us <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg></Link>
         </NavigationMenuList>
     </NavigationMenu>
   );

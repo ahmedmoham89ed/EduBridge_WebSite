@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion"; // لاستخدام animations متقدمة
+import { motion, useAnimation } from "framer-motion"; 
 
 const Design = () => {
   const data = [
@@ -105,7 +105,7 @@ const Design = () => {
   ];
 
   return (
-    <div className="mt-5 p-4 gap-6  flex-wrap grid grid-cols-3 justify-center ">
+    <div className="mt-5 p-4 gap-6  flex-wrap grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 justify-center ">
       {data.map((items, index) => (
         <motion.div
           key={items.id}

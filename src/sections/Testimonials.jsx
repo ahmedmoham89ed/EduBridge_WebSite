@@ -50,7 +50,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="mt-5 p-4 flex gap-6 justify-center">
+    <div className=" p-4 flex-wrap grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 md:gap-4 justify-center items-center">
       {testimonials.map((testimonial, index) => (
         <motion.div
           key={testimonial.id}
